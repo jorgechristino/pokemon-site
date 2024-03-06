@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./img/poke-ball-icon.ico" />
+    <title>Pokedex - Pokemon WebSite</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/pages/pokedex/pokedex.css" />
+
+    <!-- Fontawesome CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <button data-menu="button" aria-controls="menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <ul data-menu="list">
+                <button data-menu="close">
+                  <i class="fa-solid fa-x"></i>
+                </button>
+            <li>
+              <a href="index.html">
+                <svg
+                  class="menu-icon"
+                  style="
+                    width: 0.75em;
+                    height: 0.75em;
+                    vertical-align: middle;
+                    fill: currentColor;
+                    overflow: hidden;
+                  "
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 576 512"
+                >
+                  <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
+                  />
+                </svg>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg
+                  class="menu-icon"
+                  style="
+                    width: 0.75em;
+                    height: 0.75em;
+                    vertical-align: middle;
+                    fill: currentColor;
+                    overflow: hidden;
+                  "
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M512 85.333333a426.666667 426.666667 0 0 1 426.666667 426.666667 426.666667 426.666667 0 0 1-426.666667 426.666667A426.666667 426.666667 0 0 1 85.333333 512 426.666667 426.666667 0 0 1 512 85.333333m0 85.333334c-174.08 0-317.866667 130.133333-338.773333 298.666666h173.653333c18.773333-73.813333 85.76-128 165.12-128 79.36 0 146.346667 54.186667 165.12 128h173.653333c-20.906667-168.533333-164.693333-298.666667-338.773333-298.666666m0 682.666666c174.08 0 317.866667-130.133333 338.773333-298.666666h-173.653333c-18.773333 73.813333-85.76 128-165.12 128-79.36 0-146.346667-54.186667-165.12-128H173.226667c20.906667 168.533333 164.693333 298.666667 338.773333 298.666666m0-426.666666a85.333333 85.333333 0 0 0-85.333333 85.333333 85.333333 85.333333 0 0 0 85.333333 85.333333 85.333333 85.333333 0 0 0 85.333333-85.333333 85.333333 85.333333 0 0 0-85.333333-85.333333z"
+                    fill=""
+                  />
+                </svg>
+                <span>Pokedex</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg
+                  class="menu-icon"
+                  style="
+                    width: 0.75em;
+                    height: 0.75em;
+                    vertical-align: middle;
+                    fill: currentColor;
+                    overflow: hidden;
+                  "
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 576 512"
+                >
+                  <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M547.6 103.8L490.3 13.1C485.2 5 476.1 0 466.4 0H109.6C99.9 0 90.8 5 85.7 13.1L28.3 103.8c-29.6 46.8-3.4 111.9 51.9 119.4c4 .5 8.1 .8 12.1 .8c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.2 0 49.3-11.4 65.2-29c16 17.6 39.1 29 65.2 29c4.1 0 8.1-.3 12.1-.8c55.5-7.4 81.8-72.5 52.1-119.4zM499.7 254.9l-.1 0c-5.3 .7-10.7 1.1-16.2 1.1c-12.4 0-24.3-1.9-35.4-5.3V384H128V250.6c-11.2 3.5-23.2 5.4-35.6 5.4c-5.5 0-11-.4-16.3-1.1l-.1 0c-4.1-.6-8.1-1.3-12-2.3V384v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V384 252.6c-4 1-8 1.8-12.3 2.3z"
+                  />
+                </svg>
+                <span>Store</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg
+                  class="menu-icon"
+                  style="
+                    width: 0.75em;
+                    height: 0.75em;
+                    vertical-align: middle;
+                    fill: currentColor;
+                    overflow: hidden;
+                  "
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                >
+                  <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M192 64C86 64 0 150 0 256S86 448 192 448H448c106 0 192-86 192-192s-86-192-192-192H192zM496 168a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM392 304a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24v32h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H216v32c0 13.3-10.7 24-24 24s-24-10.7-24-24V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h32V200z"
+                  />
+                </svg>
+                <span>Games</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg
+                  class="menu-icon"
+                  style="
+                    width: 0.75em;
+                    height: 0.75em;
+                    vertical-align: middle;
+                    fill: currentColor;
+                    overflow: hidden;
+                  "
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"
+                  />
+                </svg>
+                <span>Regions</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="search-section">
+          <div class="div-search">
+            <input id="search-input" type="search" placeholder="Search your pokemon" />
+          </form>
+        </section>
+
+        <section class="pokedex">
+          <div class="filter-pokedex">
+            <div class="filter1">
+              <div class="container-select">
+                <div class="select-order">
+                  <span class="btn-text">Ascending</span>
+                  <span class="arrow-dwn">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </span>
+                </div>
+                <ul class="list-items">
+                  <li class="item-order">
+                    <span class="item-text">Ascending</span>
+                  </li>
+                  <li class="item-order">
+                    <span class="item-text">Descending</span>
+                  </li>
+                  <li class="item-order">
+                    <span class="item-text">A - Z</span>
+                  </li>
+                  <li class="item-order">
+                    <span class="item-text">Z - A</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="container-interval">
+                <label for="numberFrom">from</label>
+                <input type="text" name="numberFrom" id="numberFrom" value="0">
+                <label for="numberTo">to</label>
+                <input type="text" name="numberTo" id="numberTo" value="898">
+              </div>
+            </div>
+            <div class="filter2">
+              <div class="container-select">
+                <div class="select-btn">
+                  <div class="icon normal">
+                    <img src="/img/icon_types/normal.svg"/>
+                  </div>
+                  <span class="btn-text">Type</span>
+                  <span class="arrow-dwn">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </span>
+                </div>
+                <ul class="list-items items-type"></ul>
+              </div>
+
+              <div class="container-select">
+                <div class="select-btn">
+                  <i class="fa-sharp fa-solid fa-eye-slash"></i>
+                  <span class="btn-text">Weaknesses</span>
+                  <span class="arrow-dwn">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </span>
+                </div>
+                <ul class="list-items items-weaknesses"></ul>
+              </div>
+
+              <div class="container-select">
+                <div class="select-btn">
+                  <svg
+                    class="icon-select"
+                    style="vertical-align: middle; fill: currentColor; overflow: hidden"
+                    viewBox="0 0 1024 1024"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M512 85.333333a426.666667 426.666667 0 0 1 426.666667 426.666667 426.666667 426.666667 0 0 1-426.666667 426.666667A426.666667 426.666667 0 0 1 85.333333 512 426.666667 426.666667 0 0 1 512 85.333333m0 85.333334c-174.08 0-317.866667 130.133333-338.773333 298.666666h173.653333c18.773333-73.813333 85.76-128 165.12-128 79.36 0 146.346667 54.186667 165.12 128h173.653333c-20.906667-168.533333-164.693333-298.666667-338.773333-298.666666m0 682.666666c174.08 0 317.866667-130.133333 338.773333-298.666666h-173.653333c-18.773333 73.813333-85.76 128-165.12 128-79.36 0-146.346667-54.186667-165.12-128H173.226667c20.906667 168.533333 164.693333 298.666667 338.773333 298.666666m0-426.666666a85.333333 85.333333 0 0 0-85.333333 85.333333 85.333333 85.333333 0 0 0 85.333333 85.333333 85.333333 85.333333 0 0 0 85.333333-85.333333 85.333333 85.333333 0 0 0-85.333333-85.333333z"
+                      fill=""
+                    />
+                  </svg>
+                  <span class="btn-text">Ability</span>
+                  <span class="arrow-dwn">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </span>
+                </div>
+                <ul class="list-items items-ability"></ul>
+              </div>
+
+              <div class="container-select">
+                <div class="select-btn">
+                  <i class="fa-solid fa-egg"></i>
+                  <span class="btn-text">Height</span>
+                  <span class="arrow-dwn">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </span>
+                </div>
+                <ul class="list-items items-height">
+                  <li class="item">
+                    <span class="checkbox">
+                      <i class="fa-solid fa-check check-icon"></i>
+                    </span>
+                    <span class="item-text">Small</span>
+                  </li>
+                  <li class="item">
+                    <span class="checkbox">
+                      <i class="fa-solid fa-check check-icon"></i>
+                    </span>
+                    <span class="item-text">Medium</span>
+                  </li>
+                  <li class="item">
+                    <span class="checkbox">
+                      <i class="fa-solid fa-check check-icon"></i>
+                    </span>
+                    <span class="item-text">Large</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="container-select">
+                <div class="select-btn">
+                  <i class="fa-solid fa-weight-hanging"></i>
+                  <span class="btn-text">Weight</span>
+                  <span class="arrow-dwn">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </span>
+                </div>
+                <ul class="list-items items-weight">
+                  <li class="item">
+                    <span class="checkbox">
+                      <i class="fa-solid fa-check check-icon"></i>
+                    </span>
+                    <span class="item-text">Small</span>
+                  </li>
+                  <li class="item">
+                    <span class="checkbox">
+                      <i class="fa-solid fa-check check-icon"></i>
+                    </span>
+                    <span class="item-text">Medium</span>
+                  </li>
+                  <li class="item">
+                    <span class="checkbox">
+                      <i class="fa-solid fa-check check-icon"></i>
+                    </span>
+                    <span class="item-text">Large</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="filter-buttons">
+              <button class="filter-btn">
+                <i class="fas fa-search"></i>
+                <span class="search-text">Search</span>
+              </button>
+              <button class="reset-btn"></button>
+            </div>
+          </div>
+          <article class="pokedex-content">
+            <div class="loader"></div>
+          </article>
+        </section>
+
+        <aside class="pokemon-info">
+          <div class="info-fixed">
+            <div class="pokemon-main-info shine">
+              <div class="img-pokemon-info shine">
+                <img class="image-pokemon">
+              </div>
+              <div class="info2">
+                <span class="number shine"></span>
+                <span class="name shine"></span>
+                <span class="small-description shine"></span>
+                <div class="types">
+                  <div class="shine"></div>
+                  <div class="shine"></div>
+                </div>
+              </div>
+            </div>
+            <div class="info2">
+              <span class="info-title">Pokedex Entry</span>
+              <p class="description shine"></p>
+            </div>
+            <div class="info-characteristics">
+              <div class="info1">
+                <span class="info-title">Abilities</span>
+                <div class="abilities">
+                  <div class="info-content shine"><span></span></div>
+                  <div class="info-content shine"><span></span></div>
+                </div>
+              </div>
+
+              <div class="info2">
+                <span class="info-title">Height</span>
+                <div class="info-content shine ">
+                  <span class="height"></span>
+                </div>
+              </div>
+
+              <div class="info2">
+                <span class="info-title">Weight</span>
+                <div class="info-content shine">
+                  <span class="weight"></span>
+                </div>
+              </div>
+
+              <div class="info2">
+                <span class="info-title">Weaknesses</span>
+                <div class="info-content weakness-content shine"></div>
+              </div>
+
+              <div class="info2">
+                <span class="info-title">Base Exp</span>
+                <div class="info-content shine">
+                  <span class="base_exp"></span>
+                </div>
+              </div>
+
+              <div class="info1">
+                <span class="info-title">Stats</span>
+                <div class="stats">
+                  <div class="stats-background shine">
+                    <div class="stats-type hp">HP</div>
+                    <span class="stats-value"></span>
+                  </div>
+                  <div class="stats-background shine">
+                    <div class="stats-type atk">ATK</div>
+                    <span class="stats-value"></span>
+                  </div>
+                  <div class="stats-background shine">
+                    <div class="stats-type def">DEF</div>
+                    <span class="stats-value"></span>
+                  </div>
+                  <div class="stats-background shine">
+                    <div class="stats-type spA">SpA</div>
+                    <span class="stats-value"></span>
+                  </div>
+                  <div class="stats-background shine">
+                    <div class="stats-type spD">SpD</div>
+                    <span class="stats-value"></span>
+                  </div>
+                  <div class="stats-background shine">
+                    <div class="stats-type spd">SPD</div>
+                    <span class="stats-value"></span>
+                  </div>
+                  <div class="stats-background shine">
+                    <div class="stats-type tot">TOT</div>
+                    <span class="stats-value"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div id="evolution" class="info1">
+                <span class="info-title">Evolution</span>
+                <div class="evolution">
+                  <div class="img-evolution shine"></div>
+                  <div class="level shine"></div>
+                  <div class="img-evolution shine"></div>
+                  <div class="level shine"></div>
+                  <div class="img-evolution shine"></div>
+                </div>
+              </div>
+              <div class="previous-next-pokemon info1 shine">
+
+              </div>
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <section class="modal-container" data-modal="container">
+      <button data-modal="close" class="close">X</button>
+      <div class="modal">
+        <div class="pokemon-main-info">
+          <div class="img-pokemon-info shine">
+            <img class="image-pokemon">
+          </div>
+          <div class="info2">
+            <span class="number shine"></span>
+            <span class="name shine"></span>
+            <span class="small-description shine"></span>
+            <div class="types">
+              <div class="shine"></div>
+              <div class="shine"></div>
+            </div>
+          </div>
+        </div>
+        <div class="info2">
+          <span class="info-title">Pokedex Entry</span>
+          <p class="description shine"></p>
+        </div>
+        <div class="info-characteristics">
+          <div class="info1">
+            <span class="info-title">Abilities</span>
+            <div class="abilities">
+              <div class="info-content shine"><span></span></div>
+              <div class="info-content shine"><span></span></div>
+            </div>
+          </div>
+
+          <div class="info2">
+            <span class="info-title">Height</span>
+            <div class="info-content shine ">
+              <span class="height"></span>
+            </div>
+          </div>
+
+          <div class="info2">
+            <span class="info-title">Weight</span>
+            <div class="info-content shine">
+              <span class="weight"></span>
+            </div>
+          </div>
+
+          <div class="info2">
+            <span class="info-title">Weaknesses</span>
+            <div class="info-content weakness-content shine"></div>
+          </div>
+
+          <div class="info2">
+            <span class="info-title">Base Exp</span>
+            <div class="info-content shine">
+              <span class="base_exp"></span>
+            </div>
+          </div>
+
+          <div class="info1">
+            <span class="info-title">Stats</span>
+            <div class="stats">
+              <div class="stats-background shine">
+                <div class="stats-type hp">HP</div>
+                <span class="stats-value"></span>
+              </div>
+              <div class="stats-background shine">
+                <div class="stats-type atk">ATK</div>
+                <span class="stats-value"></span>
+              </div>
+              <div class="stats-background shine">
+                <div class="stats-type def">DEF</div>
+                <span class="stats-value"></span>
+              </div>
+              <div class="stats-background shine">
+                <div class="stats-type spA">SpA</div>
+                <span class="stats-value"></span>
+              </div>
+              <div class="stats-background shine">
+                <div class="stats-type spD">SpD</div>
+                <span class="stats-value"></span>
+              </div>
+              <div class="stats-background shine">
+                <div class="stats-type spd">SPD</div>
+                <span class="stats-value"></span>
+              </div>
+              <div class="stats-background shine">
+                <div class="stats-type tot">TOT</div>
+                <span class="stats-value"></span>
+              </div>
+            </div>
+          </div>
+
+          <div id="evolution" class="info1">
+            <span class="info-title">Evolution</span>
+            <div class="evolution">
+              <div class="img-evolution shine"></div>
+              <div class="level shine"></div>
+              <div class="img-evolution shine"></div>
+              <div class="level shine"></div>
+              <div class="img-evolution shine"></div>
+            </div>
+          </div>
+          <div class="previous-next-pokemon info1 shine">
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script type="module" src="js/index.js" defer></script>
+  </body>
+</html>

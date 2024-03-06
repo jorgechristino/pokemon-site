@@ -1,0 +1,456 @@
+@import url(../../global/global.css);
+@import url(../../global/header.css);
+@import url(../../global/menu-mobile.css);
+@import url(carousel.css);
+
+/* PAGE STRUCTURE */
+[data-menu='list'] {
+  margin-left: 0;
+}
+
+header {
+  margin: 20px auto 40px auto;
+}
+
+p {
+  margin: 0;
+}
+
+.main-image {
+  width: 100%;
+  height: 600px;
+  background-color: #1d2c3f;
+}
+
+.image-background {
+  display: flex;
+  background-image: url(../../../img/adventure-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fff;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-family: 'MonaSans-Bold', sans-serif;
+}
+
+.text-small {
+  font-size: 40px;
+  font-family: 'Caveat';
+}
+
+.text-main {
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.text-big {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.btn-shop {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2px;
+  border: 2px solid #ca2e1f;
+  border-radius: 5px;
+  background-color: #ca2e1f;
+  color: #fff;
+  cursor: pointer;
+}
+
+.items-shop {
+  display: grid;
+  margin: 20px auto;
+  max-width: 1280px;
+}
+
+.items {
+  display: grid;
+  margin: 20px 0;
+  grid-template-rows: 220px 220px;
+  gap: 20px;
+}
+
+.list {
+  display: grid;
+  gap: 20px;
+}
+
+.list:first-child {
+  grid-template-columns: 2fr 3fr;
+}
+
+.list:last-child {
+  grid-template-columns: 3fr 2fr;
+}
+
+.list .item {
+  display: grid;
+  background-color: #e8e8e8;
+  height: 220px;
+  gap: 15px;
+  border-radius: 15px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 220px;
+  overflow: hidden;
+  align-items: center;
+}
+
+.list:first-child .item .img-item {
+  grid-column: 1;
+}
+
+.list:last-child .item .img-item {
+  grid-column: 2;
+}
+
+.img-item.potion {
+  margin-top: 30px;
+}
+
+.img-item.bicycle {
+  height: 100%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 20px 20px 20px 0;
+  font-family: 'MonaSans-Bold', sans-serif;
+}
+
+.list:first-child .item .info {
+  grid-column: 2;
+}
+
+.list:last-child .item .info {
+  grid-column: 1;
+  padding-left: 40px;
+}
+
+.category {
+  font-size: 0.9rem;
+  color: #abb5be;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-family: 'Flexo-Regular', sans-serif;
+}
+
+.name {
+  font-size: 2rem;
+  color: #011030;
+  font-weight: bold;
+}
+
+.rate i.yellow {
+  color: #ea8d2d;
+}
+
+.rate i.gray {
+  color: #b9bcc3;
+}
+
+.rate span {
+  font-size: 0.9rem;
+  margin-left: 10px;
+  color: #b9bcc3;
+}
+
+.btn-add {
+  margin-top: 20px;
+  width: fit-content;
+  padding: 7.5px 15px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+  border: 2px solid #ca2e1f;
+  border-radius: 5px;
+  background-color: #ca2e1f;
+  color: #fff;
+  cursor: pointer;
+}
+
+.quote {
+  display: flex;
+  margin-top: 40px;
+  background-image: url(../../../img/background-quote-edit.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fff;
+  height: 350px;
+  align-items: center;
+  justify-content: center;
+  font-family: 'MonaSans-Bold', sans-serif;
+  flex-direction: column;
+}
+
+.container-line {
+  display: flex;
+  flex-direction: row;
+  height: 3px;
+  width: 82%;
+  justify-content: space-between;
+}
+
+.quote div {
+  font-size: 3rem;
+  align-self: center;
+}
+
+.line1 {
+  background-color: #fff;
+  width: 40%;
+  height: 100%;
+}
+
+.line2 {
+  background-color: #fff;
+  height: 3px;
+  width: 82%;
+}
+
+.quote p {
+  text-transform: uppercase;
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 3px;
+  margin: 40px;
+}
+
+/* POKEMON CENTER */
+
+.pokemon-center {
+  display: grid;
+  grid-template-columns: 600px 600px;
+  grid-template-rows: 300px;
+  margin-top: 60px;
+  background-color: #ebebeb;
+  justify-content: center;
+}
+
+.pokemon-center img {
+  max-height: 100%;
+}
+
+.info-pc {
+  padding: 20px 120px 20px 20px;
+}
+
+.info-pc h2 {
+  text-transform: uppercase;
+  color: #ca2e1f;
+}
+
+.info-pc p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form {
+  width: 100%;
+  margin: 30px auto;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+}
+
+.search-input::placeholder {
+  color: #313d55;
+  font-size: 1.1rem;
+}
+
+.search-btn {
+  width: 25%;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-shadow: none;
+  background-color: #ca2e1f;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+
+/* SIGN UP NEWSLETTER */
+.newsletter {
+  display: grid;
+  align-items: center;
+  height: 400px;
+  background-color: #1d2c3f;
+  padding: 0px 30%;
+  background-image: url(../../../img/pikachu.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.newsletter p {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.newsletter .search-input::placeholder {
+  color: #aeaeae;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background-color: #f8f9fb;
+}
+
+footer ul {
+  display: flex;
+  gap: 30px;
+}
+
+footer ul li a {
+  font-weight: bold;
+  position: relative;
+}
+
+footer ul li a:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 0px;
+  background: #011030;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+}
+
+footer ul li a:hover:after {
+  width: 100%;
+}
+/* MEDIA QUERIES */
+
+@media (max-width: 1320px) {
+  .list:first-child {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .list:last-child {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .img-item.potion {
+    width: 85%;
+  }
+
+  .img-item.pokeball {
+    width: 120%;
+  }
+
+  .img-item.bicycle {
+    width: 80%;
+    height: auto;
+  }
+
+  .img-item.stone {
+    width: 80%;
+  }
+
+  .category {
+    font-size: 0.8rem;
+  }
+
+  .name {
+    font-size: 1.7rem;
+  }
+
+  .btn-add {
+    font-size: 0.6rem;
+  }
+
+  .pokemon-center {
+    grid-template-columns: 583px;
+    grid-template-rows: 300px 300px;
+  }
+
+  .pokemon-center .info-pc {
+    padding: 20px 0 0 0;
+  }
+
+  .newsletter {
+    padding: 0px 15%;
+  }
+}
+
+@media (max-width: 800px) {
+  .text-main {
+    font-size: 60px;
+  }
+
+  .items {
+    grid-template-rows: 460px 460px;
+    padding: 0 10px;
+  }
+
+  .list:first-child {
+    grid-template-rows: 220px 220px;
+    grid-template-columns: 1fr;
+  }
+
+  .list:last-child {
+    grid-template-columns: 1fr;
+  }
+
+  .quote div {
+    font-size: 1.5rem;
+  }
+
+  .quote p {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .pokemon-center {
+    display: block;
+  }
+
+  .pokemon-center img {
+    display: none;
+  }
+
+  .pokemon-center .info-pc {
+    padding: 20px;
+  }
+
+  .search-input::placeholder {
+    font-size: 1rem;
+  }
+
+  .search-btn {
+    width: 30%;
+    font-size: 0.75rem;
+  }
+}

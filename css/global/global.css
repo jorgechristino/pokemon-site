@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f6f8fc;
+  font-family: 'Flexo-Regular', 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  color: #011030;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@font-face {
+  font-family: 'Flexo-Regular';
+  src: url('../../fonts/Flexo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Flexo-Bold';
+  src: url('../../fonts/Flexo-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MonaSans-Bold';
+  src: url('../../fonts/MonaSans-Bold.ttf') format('truetype');
+}
+
+input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}

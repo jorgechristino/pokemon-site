@@ -1,0 +1,75 @@
+/* SKELETON */
+.pokemon-main-info.shine {
+  z-index: 2;
+}
+
+.img-pokemon-info.shine {
+  height: 120px;
+  width: 120px;
+  margin-top: 25px;
+  border-radius: 50%;
+}
+
+.info2 .number.shine {
+  height: 12px;
+  width: 50px;
+  margin-top: 10px;
+}
+
+.info2 .name.shine {
+  height: 30px;
+  width: 140px;
+  margin-top: 10px;
+}
+
+.info2 .small-description.shine {
+  height: 17px;
+  width: 100px;
+  margin-top: 10px;
+}
+
+.types .shine {
+  padding: 7.5px 15px;
+  width: 72px;
+  height: 30px;
+}
+
+.info2 .description.shine {
+  height: 57px;
+  width: 267px;
+}
+
+.info-content.shine,
+.stats-background.shine {
+  border-radius: 0 !important;
+}
+
+.stats-background.shine .stats-type {
+  display: none;
+}
+
+.img-evolution.shine {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.shine {
+  background: #f6f7f8;
+  background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background-repeat: no-repeat;
+  background-size: 800px 104px;
+  display: inline-block;
+  position: relative;
+  animation: placeholderShimmer 1s linear infinite;
+}
+
+@keyframes placeholderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+
+  100% {
+    background-position: 468px 0;
+  }
+}
